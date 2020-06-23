@@ -35,7 +35,7 @@ const Result = ({total}) => {
             : (
                 <ResultContainer>
                     <TransitionGroup
-                        component="div"
+                        component="span"
                         className="results"
                     >
                         <CSSTransition
@@ -43,7 +43,7 @@ const Result = ({total}) => {
                             key={total}
                             timeout={{enter: 500, exit: 500}}
                         >
-                            <ResultText>El total es: $ {total.toFixed(2)}</ResultText>
+                            <ResultText>El total es: <span>$ {total.toFixed(2)}</span></ResultText>
                         </CSSTransition>
                     </TransitionGroup>
                 </ResultContainer>
